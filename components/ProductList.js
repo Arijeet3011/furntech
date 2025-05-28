@@ -1,19 +1,28 @@
 const products = [
-  { id: 1, name: "Wooden Chair", price: "$120", image: "/chair.jpg" },
-  { id: 2, name: "Modern Sofa", price: "$520", image: "/sofa.jpg" },
-  { id: 3, name: "Study Table", price: "$300", image: "/table.jpg" },
+  {
+    id: '1',
+    name: 'Wooden Sofa Set',
+    price: 899.99,
+    image: '/images/sofa.jpg',
+    description: 'Elegant wooden sofa set with premium cushions.',
+    category: 'Sofa',
+  },
+  {
+    id: '2',
+    name: 'Dining Table',
+    price: 499.99,
+    image: '/images/dining-table.jpg',
+    description: 'Classic wooden dining table with sturdy legs.',
+    category: 'Dining',
+  },
+  {
+    id: '3',
+    name: 'Office Chair',
+    price: 199.99,
+    image: '/images/office-chair.jpg',
+    description: 'Comfortable wooden office chair with ergonomic design.',
+    category: 'Chair',
+  },
 ];
 
-export default function ProductList() {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {products.map((product) => (
-        <div key={product.id} className="border p-4 rounded-lg shadow-md">
-          <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-2" />
-          <h2 className="text-xl font-semibold">{product.name}</h2>
-          <p className="text-gray-600">{product.price}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+export default products;
